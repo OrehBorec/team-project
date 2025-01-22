@@ -76,4 +76,6 @@ header{
       position: fixed;
       right: 5%;
       bottom: 5%;
+      transition: transform 0.3s;
 }
+
