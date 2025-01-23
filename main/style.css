@@ -63,7 +63,7 @@ header{
 .plus{
     width: 100px;
       height: 100px;
-      background-color: rgb(128, 0, 255);
+      background-color:  rgb(128, 0, 255);
       color: white;
       border: none; 
       border-radius: 50%;
@@ -78,3 +78,50 @@ header{
       bottom: 5%;
       transition: transform 1s;
 }
+
+.form-container {
+    transform: scale(0);
+    transition: 1s;
+    margin: 100px auto;
+    width: 300px;
+    box-shadow: -2px 1px 29px 20px rgba(81, 3, 237, 0.2);
+    background-color: rgb(157, 139, 226);
+    height: 330px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.form-input {
+    border: none;                 
+    border-bottom: 2px solid #ffffff; 
+    background: none;             
+    outline: none;                
+}
+input{
+    color: white !important;
+}
+.form-group-pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.form > .form-group {
+    margin: 20px 0;
+}
+
+.form-label {
+    margin-top: 5px;
+}
+
+.form-read-options {
+    display: flex;
+    margin: 10px 0;
+    gap: 5px;
+}
+
+.form-read-label {
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
