@@ -81,7 +81,6 @@ header{
 
 .form-container {
     transform: scale(0);
-    transition: 1s;
     margin: 100px auto;
     width: 300px;
     box-shadow: -2px 1px 29px 20px rgba(81, 3, 237, 0.2);
