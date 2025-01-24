@@ -11,7 +11,7 @@ buttonPlus.addEventListener('click', () => {
     if (!isRotated) {
          formContainer.style.transform = 'scale(1)'
          formContainer.style.transition = '1s';
-        formContainer.style.display = 'block';
+        formContainer.style.display = 'flex';
         buttonPlus.style.transform = 'rotate(45deg)';
         buttonPlus.style.backgroundColor = 'gray';
         isRotated = true;
@@ -49,10 +49,10 @@ form.addEventListener('submit', (event) => {
         <p><strong>Pages:</strong> ${pages}</p>
         <p>
             <strong>Read:</strong> 
-            <select class="read-status">
-                <option value="read-yes" ${readStatus === 'read-yes' ? 'selected' : ''}>Yes</option>
-                <option value="read-no" ${readStatus === 'read-no' ? 'selected' : ''}>No</option>
-            </select>
+            <div class="read-status">
+                <input name="${pages}" type="radio" value="read-yes" ${readStatus === 'read-yes' ? 'selected' : ''}>Yes</input>
+                <input name="${pages}" type="radio" value="read-no" ${readStatus === 'read-no' ? 'selected' : ''}>No</input>
+            </div>
         </p>
         <button class="btn delete">Delete</button>
     `;
@@ -67,3 +67,4 @@ form.addEventListener('submit', (event) => {
 
     form.reset();
 });
+
