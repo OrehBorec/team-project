@@ -43,7 +43,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+*{
+    box-sizing: border-box;
+}
 /* стили для header */
 
 .logo{
@@ -78,27 +80,42 @@ header{
       bottom: 5%;
       transition: transform 1s;
 }
-
+.form-heading{
+    font-size: 25px;
+}
 .form-container {
     transform: scale(0);
     margin: 100px auto;
     width: 300px;
     box-shadow: -2px 1px 29px 20px rgba(81, 3, 237, 0.2);
     background-color: rgb(157, 139, 226);
-    height: 330px;
+    height: 370px;
     border-radius: 10px;
     color: rgb(255, 255, 255);
-    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  
 }
 
 .form-input {
     border: none;                 
     border-bottom: 2px solid #ffffff; 
     background: none;             
-    outline: none;                
+    outline: none;      
+    width: 200px;          
 }
 input{
     color: white !important;
+    cursor: pointer;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 .form-group-pages {
     display: flex;
@@ -107,10 +124,35 @@ input{
 
 .form > .form-group {
     margin: 20px 0;
+    position: relative;
 }
 
 .form-label {
     margin-top: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.form-label.anim{
+    position: absolute;
+    top: -3px;
+    left: 2px;
+}
+label{
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+label:hover{
+    transform: translateY(-3px);
+    transition-duration: 300ms;
+}
+::placeholder{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .form-read-options {
@@ -131,5 +173,33 @@ input{
     width: 200px;
     height: 30px;
     border-radius: 5px;
-    margin: 20px 50px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transition-duration: 300ms;
 }
+.btn:hover{
+    transition-duration: 300ms;
+    transform: scale(1.05);
+}
+input[type='radio']{
+    accent-color: blueviolet;
+}
+input[type='radio']:hover{
+    transition-duration: 400ms;
+    transform: scale(1.2);
+}
+/* Убираем стрелки*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+

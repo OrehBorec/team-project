@@ -6,7 +6,7 @@ buttonPlus.addEventListener('click', () => {
     if (!isRotated) {
          formContainer.style.transform = 'scale(1)'
          formContainer.style.transition = '1s';
-        formContainer.style.display = 'block';
+        formContainer.style.display = 'flex';
         buttonPlus.style.transform = 'rotate(45deg)';
         buttonPlus.style.backgroundColor = 'red';
         isRotated = true;
